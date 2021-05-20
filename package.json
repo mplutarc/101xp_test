@@ -1,0 +1,17 @@
+{
+  "name": "101xp_test",
+  "version": "1.0.0",
+  "description": "Тестовое задание в компанию 101xp, срок выполнения - 1 рабочий день",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.14"
+  }
+}

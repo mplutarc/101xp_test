@@ -1,0 +1,542 @@
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+}
+
+/*Блок 1*/
+.header{
+	background: url("../sources/promo/1_HEADER/1_HEADER_bg.jpg") no-repeat center top;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	/*background-size: 115%;*/
+}
+.header img{
+	margin: auto;
+}
+.header .logo{
+	width: 32%;
+}
+.header .head{
+	width: 41%;
+	margin: -5px auto;
+}
+.play-btn{
+	width: 29%;
+}
+.play-btn:hover{
+	background: url("../sources/promo/BTN_play_hover.png") no-repeat;
+	background-size: contain;
+}
+.play-btn:active{
+	background: url("../sources/promo/BTN_play_active.png") no-repeat;
+	background-size: contain;
+}
+
+/*Кнопка перехода по блокам*/
+.scroll{
+	margin: auto;
+	width: 8%;
+}
+.scroll:hover{
+	background: url("../sources/promo/BTN_scroll_hover.png") no-repeat;
+	background-size: contain;
+ }
+.scroll:active{
+	background: url("../sources/promo/BTN_scroll_active.png") no-repeat;
+	background-size: contain;
+ }
+.scroll img{
+	width: 100%;
+}
+
+
+p{
+	font-size: calc( (100vw - 320px)/(1280 - 320) * (20 - 8) + 8px);
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	color: #e9e8e6;
+}
+
+/*Блок 2*/
+.chars{
+	position: relative;
+	z-index: 0;
+}
+
+/*Слайдер */
+.slider{
+	position: relative;
+}
+.slider .item{
+	flex-direction: column;
+}
+.slider .item1{
+	background: url("../sources/promo/2_CHARS/2_CHARS_bg_Isolda.jpg") no-repeat center top;
+	background-size: cover;
+}
+.slider .item2{
+	background: url("../sources/promo/2_CHARS/2_CHARS_bg_Pamela.jpg") no-repeat center top;
+	background-size: cover;
+}
+.slider .item3{
+	background: url("../sources/promo/2_CHARS/2_CHARS_bg_Lleyn.jpg") no-repeat center top;
+	background-size: cover;
+}
+.slider .item img {
+	margin: auto;
+}
+.slider .item .head {
+	width: 42%;
+}
+/*Описание персонажа*/
+.slider .item .description{
+	display: flex;
+	flex-direction: column;
+	width: 33%;
+	margin-left: calc((100% / 8) - 26px);
+	margin-top: -6%;
+}
+.slider .item .description .name{
+	width: 85%;
+	margin-left: 0;
+}
+/*Фракция*/
+.slider .item .description .fraction{
+	margin: -5px 0 5px 10%;
+	display: flex;
+}
+.slider .item .description .fraction img{
+	width: 6%;
+}
+.slider .item .description .fraction p{
+	font-size: calc( (100vw - 320px)/(1280 - 320) * (18 - 6) + 6px);
+	text-align: left;
+	padding-left: calc( (100vw - 320px)/(1280 - 320) * (18 - 6) + 2px);
+}
+.slider .item1 .description .fraction p {
+	color: #fa3238;
+}
+.slider .item2 .description .fraction p {
+	color: #c683f8;
+}
+.slider .item3 .description .fraction p {
+	color: #f7c016;
+}
+
+/*Основной текст*/
+.slider .item .description .text{
+	margin-left: 8%;
+	text-align: left;
+	margin-top: 0;
+}
+
+/*Скилы*/
+.slider .item .description .skill{
+	display: flex;
+	margin: 3px 0 3px 8%;
+}
+.slider .item .description .skill img{
+	width: 18%;
+	height: fit-content;
+	margin: 0;
+}
+.slider .item .description .skill p{
+	text-align: left;
+}
+
+/*Описание скила*/
+.slider .item .description .skill .text{
+	margin-left: 5px;
+	padding-left: calc( (100vw - 320px)/(1280 - 320) * (18 - 6) + 4px);
+}
+.slider .item .description .skill .text .title{
+	margin-top: 0;
+}
+.slider .item .description .skill .text .desc {
+	font-weight: lighter;
+	font-size: calc((100vw - 320px) / (1280 - 320) * (16 - 4) + 4px);
+}
+
+
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+	cursor: pointer;
+	position: absolute;
+	/*top: 0;*/
+	top: 50%;
+	width: 15%;
+	margin-top: -22px;
+	transition: 0.6s ease;
+}
+.slider .prev:hover, .slider .next:hover {
+	background: url("../sources/promo/BTN_scroll_hover.png") no-repeat;
+	background-size: contain;
+}
+.slider .prev:active, .slider .next:active {
+	background: url("../sources/promo/BTN_scroll_active.png") no-repeat;
+	background-size: contain;
+}
+.slider .prev img, .slider .next img{
+	width: 100%;
+}
+.slider .next {
+	right: -5px;
+	transform: rotate(-90deg);
+}
+.slider .prev {
+	left: -12px;
+	transform: rotate(90deg);
+}
+
+/* Кружочки */
+.slider-dots {
+	text-align: center;
+	position: absolute;
+	right: 10%;
+	top: 10%;
+	z-index: 999;
+	display: flex;
+	flex-direction: column;
+}
+.slider-dots_item{
+	cursor: pointer;
+	height: 30px;
+	width: 30px;
+	margin: 5px 0;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+/*Иконка 1*/
+.slider-dots_item1{
+	background: url("../sources/promo/2_CHARS/2_CHARS_icon_Isolda_inactive.png") no-repeat;
+	background-size: contain;
+}
+.slider-dots_item1.active, .slider-dots_item3.active:hover{
+	background: url("../sources/promo/2_CHARS/2_CHARS_icon_Isolda_active.png") no-repeat !important;
+	background-size: contain !important;
+}
+.slider-dots_item1:hover {
+	background: url("../sources/promo/2_CHARS/2_CHARS_icon_Isolda_hover.png") no-repeat;
+	background-size: contain;
+}
+
+/*Иконка 2*/
+.slider-dots_item2{
+	background: url("../sources/promo/2_CHARS/2_CHARS_icon_Pamela_inactive.png") no-repeat;
+	background-size: contain;
+}
+.slider-dots_item2.active, .slider-dots_item3.active:hover{
+	background: url("../sources/promo/2_CHARS/2_CHARS_icon_Pamela_active.png") no-repeat !important;
+	background-size: contain !important;
+}
+.slider-dots_item2:hover {
+	background: url("../sources/promo/2_CHARS/2_CHARS_icon_Pamela_hover.png") no-repeat;
+	background-size: contain;
+}
+
+/*Иконка 3*/
+.slider-dots_item3{
+	background: url("../sources/promo/2_CHARS/2_CHARS_icon_Lleyn_inactive.png") no-repeat;
+	background-size: contain;
+}
+.slider-dots_item3.active, .slider-dots_item3.active:hover{
+	background: url("../sources/promo/2_CHARS/2_CHARS_icon_Lleyn_active.png") no-repeat !important;
+	background-size: contain !important;
+}
+.slider-dots_item3:hover {
+	background: url("../sources/promo/2_CHARS/2_CHARS_icon_Lleyn_hover.png") no-repeat;
+	background-size: contain;
+}
+/* Анимация слайдов */
+.slider .item {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+	from {
+		opacity: .4
+	}
+	to {
+		opacity: 1
+	}
+}
+@keyframes fade {
+	from {
+		opacity: .4
+	}
+	to {
+		opacity: 1
+	}
+}
+
+/*Блок 3*/
+.video{
+	position: relative;
+	background: url("../sources/promo/3_VIDEO/3_VIDEO_shadow_top.png") no-repeat top;
+	background-size: contain;
+}
+.video .head, .video-main-text, .video .scroll{
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+.video .head{
+	top: 0;
+	width: 40%;
+}
+.video-main-text{
+	bottom: 12%;
+}
+.video .scroll{
+	bottom: 2px;
+}
+
+/*Блок 4*/
+.mount{
+	background: url("../sources/promo/4_MOUNT/4_MOUNT_bg.jpg") no-repeat;
+	background-size: cover;
+	margin-top: -5px;
+	display: flex;
+	flex-direction: column;
+}
+.mount .head{
+	width: 42%;
+	margin: auto;
+}
+.mount .rating{
+	width: 70%;
+	margin: 25% auto 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+.mount .rating img{
+	width: 48%;
+}
+.mount-main-text{
+	margin-top: 1%;
+	font-size: calc((100vw - 320px) / (1280 - 320) * (16 - 8) + 7px);
+}
+
+/*Блок 5*/
+.footer{
+	background: url("../sources/promo/5_FOOTER/5_FOOTER_BG.jpg") no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	margin-top: -5px;
+	align-items: center;
+}
+.footer .head{
+	width: 42%;
+}
+/*Соц сети*/
+.socials{
+	margin-top: 1%;
+	width: 35%;
+	display: flex;
+	justify-content: space-between;
+}
+.socials img{
+	width: 20%;
+}
+.fb:hover{
+	background: url("../sources/promo/5_FOOTER/5_FOOTER_btn_fb_hover.png");
+	background-size: contain;
+}
+.fb:active{
+	background: url("../sources/promo/5_FOOTER/5_FOOTER_btn_fb_active.png");
+	background-size: contain;
+}
+.vk:hover{
+	background: url("../sources/promo/5_FOOTER/5_FOOTER_btn_vk_hover.png");
+	background-size: contain;
+}
+.vk:active{
+	background: url("../sources/promo/5_FOOTER/5_FOOTER_btn_vk_active.png");
+	background-size: contain;
+}
+.ok:hover{
+	background: url("../sources/promo/5_FOOTER/5_FOOTER_btn_ok_hover.png");
+	background-size: contain;
+}
+.ok:active{
+	background: url("../sources/promo/5_FOOTER/5_FOOTER_btn_ok_active.png");
+	background-size: contain;
+}
+.mail:hover{
+	background: url("../sources/promo/5_FOOTER/5_FOOTER_btn_mail_hover.png");
+	background-size: contain;
+}
+.mail:active{
+	background: url("../sources/promo/5_FOOTER/5_FOOTER_btn_mail_active.png");
+	background-size: contain;
+}
+
+/*мелкий текст и лого*/
+.small-text, .small-text a{
+	color: #928e8b;
+	font-size: calc((100vw - 320px) / (1280 - 320) * (16 - 4) + 4px);
+	margin-top: 3%;
+}
+.footer .logo{
+	width: 10%;
+	margin: 3% auto 10% auto;
+}
+
+
+@media (min-width: 375px) {
+	.chars-main-text{
+		width: 90%;
+		margin-top: 10px;
+	}
+}
+@media (min-width: 425px) {
+	.slider .item .description{
+		margin-left: calc((100% / 8) - 14px);
+		width: 30%;
+	}
+	.slider-dots{
+		right: 13%;
+		top: 15%;
+	}
+}
+@media (min-width: 540px) {
+	.slider .item .description{
+		margin-left: calc((100% / 8) + 8px);
+		width: 28%;
+		margin-top: -5%;
+	}
+	.slider-dots{
+		right: 15%;
+		top: 25%;
+	}
+	.slider-dots_item {
+		height: 40px;
+		width: 40px;
+	}
+}
+@media (min-width: 640px) {
+	.slider-dots{
+		right: 15%;
+		top: 25%;
+	}
+	.slider-dots_item {
+		height: 45px;
+		width: 45px;
+	}
+	.video-main-text{
+		width: 95%;
+	}
+}
+@media (min-width: 768px) {
+	.slider .item .description{
+		margin-left: calc((100% / 8) + 10px);
+		width: 25%;
+		margin-top: -4%;
+	}
+	.slider .item .description .name{
+		width: 100%;
+	}
+	.slider .item .description .skill{
+		margin: 15px 0 0 8%;
+	}
+	.slider .item .description .fraction{
+		margin: -10px 0 10px 10%;
+	}
+	.slider .prev, .slider .next{
+		width: 10%;
+	}
+	.chars-main-text {
+		width: 80%;
+		margin-top: 35px;
+	}
+	.slider-dots{
+		top: 27%;
+	}
+	.slider-dots_item {
+		height: 60px;
+		width: 60px;
+	}
+	.mount-main-text{
+		font-size: calc( (100vw - 320px)/(1280 - 320) * (20 - 8) + 8px);
+	}
+}
+@media (min-width: 1230px) {
+	.slider .item .description{
+		margin-left: calc((100% / 8) + 15px);
+		width: 27%;
+	}
+	.slider .item2 .description{
+		width: 26%;
+	}
+	.slider .item3 .description{
+		margin-left: calc((100% / 8) + 15px);
+		width: 27%;
+	}
+	.slider .item .description .fraction {
+		margin: -22px 0 15px 10%;
+	}
+	.slider .item2 .description .fraction, .slider .item3 .description .fraction{
+		margin: -28px 0 15px 10%;
+	}
+	.slider .item .description .text, .slider .item .description .skill{
+		margin-left: 10%;
+	}
+	.slider .item .description .skill{
+		margin-top: 20px;
+	}
+	.slider .item .description .skill img{
+		width: auto;
+	}
+	.chars-main-text {
+		width: 70%;
+		margin-top: 50px;
+	}
+	.slider-dots{
+		top: 25%;
+	}
+	.slider-dots_item {
+		height: 110px;
+		width: 110px;
+	}
+	.video-main-text{
+		width: 80%;
+	}
+}
+@media (min-width: 1800px) {
+	.slider .item .description {
+		margin-left: calc((100% / 8) + 50px);
+		width: 25%;
+	}
+	.slider .item .description {
+		margin-left: calc((100% / 8) + 65px);
+		width: 24%;
+	}
+	.slider-dots{
+		top: 23%;
+	}
+	.slider-dots_item {
+		height: 150px;
+		width: 150px;
+		margin: 10px 0;
+	}
+	.slider .prev, .slider .next {
+		width: 7%;
+		margin-top: -65px;
+	}
+	.video-main-text{
+		width: 74%;
+	}
+}
